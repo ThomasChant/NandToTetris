@@ -64,8 +64,10 @@ CHIP CPU {
 	And(a=n3,b=instruction[2],out=a3);
 	
 	Or(a=a1,b=a2,out=or4);
-	Or(a=or4,b=a3,out=load);
+	Or(a=or4,b=a3,out=or5);
 	
-	PC(in=aout,reset=reset,load=load,inc=true,out[0..14]=pc);
+	And(a=or5,b=instruction[15],out=aload);
+	
+	PC(in=aout,reset=reset,load=aload,inc=true,out[0..14]=pc);
 	
 }
