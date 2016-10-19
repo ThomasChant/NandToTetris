@@ -4,9 +4,10 @@
 public enum  Mark {
     AT("@"),
     EQUAL("="),
-    SEMICOLON(";");
-
-    ;
+    SEMICOLON(";"),
+    SLASH("//"),
+    LEFTASTER("/*"),
+    RIGHTSTAR("*/");
     private String value;
 
     Mark(String value) {
