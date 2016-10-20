@@ -7,18 +7,30 @@ import java.util.Map;
 public class SymbolTable {
     private final Map<String,Integer> symbolPairs;
 
-    public SymbolTable(Map<String,Integer> symbolPairs){
-        this.symbolPairs = symbolPairs;
+    public SymbolTable(){
+        symbolPairs = new HashMap<>();
         symbolPairs.putAll(PreSymbol.PREDEFINE_SYMBOL);
     }
 
-    public boolean containsSymbol(String symbol){
+    public boolean contains(String symbol){
         return symbolPairs.containsKey(symbol);
     }
 
-    public int getValue(String symbol){//todo
-        return 0;
+    public int get(String symbol){//todo
+        return symbolPairs.get(symbol);
     }
+
+    public void put(String sysbol,int value){
+        if(!contains(sysbol)){
+            symbolPairs.put(sysbol,value);
+            Integer a = symbolPairs.get(sysbol);
+        }
+
+    }
+
+
+
+
 
 
 

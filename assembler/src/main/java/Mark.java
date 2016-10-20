@@ -6,8 +6,8 @@ public enum  Mark {
     EQUAL("="),
     SEMICOLON(";"),
     SLASH("//"),
-    LEFTASTER("/*"),
-    RIGHTSTAR("*/");
+    LEFT_PARENTHESE("("),
+    RIGHT_PARENTHESE(")");
     private String value;
 
     Mark(String value) {
