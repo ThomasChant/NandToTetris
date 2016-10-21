@@ -14,11 +14,16 @@ public class Assembler {
 
             //add symbol to symbol table
             SymbolHandler handler = new SymbolHandler();
+            //create and init sysmbol table
             SymbolTable symbolTable = new SymbolTable();
+
+            //add label to symbol table and remove the label from lines
             lines = handler.handlePassOne(symbolTable,lines);
+
+            //add var sysmbol to symbol table
             handler.handlePassTwo(symbolTable,lines);
 
-            //parse assemble code to binary machine code
+            //parse hack assemble code to binary machine code
             Parser parser = new Parser(symbolTable);
             lines = parser.parseCode(lines);
 
