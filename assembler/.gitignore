@@ -8,3 +8,6 @@
 .idea/
 .vscode/
 build/
+
+*.asm
+*.hack
