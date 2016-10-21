@@ -9,7 +9,7 @@ public class CodeWriter {
 
     private PrintWriter writer;
 
-    public CodeWriter(String path,boolean autoflush) throws IOException{
+    public CodeWriter(String path) throws IOException{
         FileOutputStream fos = new FileOutputStream(path);
         this.writer = new PrintWriter(fos,true);
 
