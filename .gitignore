@@ -1,0 +1,12 @@
+*.iml
+*.ipr
+*.iws
+*.log
+*.log.*
+
+.gradle/
+.idea/
+.vscode/
+build/
+
+
